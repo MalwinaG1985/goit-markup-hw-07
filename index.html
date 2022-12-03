@@ -22,8 +22,8 @@
     <header class="header">
       <div class="container">
         <div class="header__all-nav">
-          <a class="header__container-logo" href="./index.html">
-            <span class="header__logo-color">Web</span>
+          <a class="logo" href="./index.html">
+            <span class="logo__color">Web</span>
             <span>studio</span>
           </a>
           <nav>
@@ -142,7 +142,7 @@
 
       <section>
         <div class="container">
-          <h2>Czym się zajmujemy</h2>
+          <h2 class="sub-title">Czym się zajmujemy</h2>
           <ul class="wrapper2">
             <li class="wrapper2__images-description">
               <img
@@ -449,48 +449,52 @@
     <div class="footer">
       <footer class="container">
         <div class="footer__all">
-          <address class="footer__address">
-            <ul class="footer__footer-list">
-              <li class="footer__logo-footer">
-                <a class="footer__container-logo" href="./index.html">
-                  <span class="footer__logo-color">Web</span
-                  ><span style="color: white">Studio</span></a
+          <address class="address">
+            <ul class="address__list">
+              <li class="address__logo">
+                <a class="logo" href="./index.html">
+                  <span class="logo__color">Web</span
+                  ><span class="logo__color--white">Studio</span></a
                 >
               </li>
               <li>
-                <div style="font-style: normal" class="footer__leter-style1 size">
-                  <p class="footer__color-adress">m. Warszawa, Aleje Jerozolimskie 21</p>
+                <div style="font-style: normal" class="address__text address__size">
+                  <p class="address__text--color">m. Warszawa, Aleje Jerozolimskie 21</p>
                 </div>
               </li>
               <li>
-                <div class="footer__letter-style2 size">
-                  <a class="footer__color-mail" href="mailto:info@example.com">info@example.com</a>
+                <div class="address__text address__size">
+                  <a class="address__text--color" href="mailto:info@example.com"
+                    >info@example.com</a
+                  >
                 </div>
               </li>
               <li>
-                <div class="footer__letter-style3 size"><p>+48 111 111 111</p></div>
+                <div class="adress__text adress__text--style address__size">
+                  <p>+48 111 111 111</p>
+                </div>
               </li>
             </ul>
           </address>
           <div class="footer-icons">
             <h3 class="footer-icons__header">Dołącz do nas</h3>
-            <div class="footer-icons__icon">
-              <div class="footer-icons__icons icon">
+            <div class="footer-icons__style">
+              <div class="footer-icons__icon footer-icons__icon--position">
                 <svg width="20" height="20">
                   <use xlink:href="./images/icons.svg/icony-defs.svg#icon-instagram-2"></use>
                 </svg>
               </div>
-              <div class="icon footer-icons__icons">
+              <div class="footer-icons__icon--position footer-icons__icon">
                 <svg width="20" height="20">
                   <use xlink:href="./images/icons.svg/icony-defs.svg#icon-twitter-1"></use>
                 </svg>
               </div>
-              <div class="icon footer-icons__icons">
+              <div class="footer-icons__icon--position footer-icons__icon">
                 <svg width="20" height="20">
                   <use xlink:href="./images/icons.svg/icony-defs.svg#icon-facebook-1"></use>
                 </svg>
               </div>
-              <div class="icon footer-icons__icons">
+              <div class="footer-icons__icon--position footer-icons__icon">
                 <svg width="20" height="20">
                   <use xlink:href="./images/icons.svg/icony-defs.svg#icon-linkedin-1"></use>
                 </svg>
@@ -553,16 +557,16 @@
                   placeholder="Wprowadź tekst"
                 ></textarea>
               </label>
-              <label class="modal__t">
-                <input class="modal__checkbox" type="checkbox" name="regulamin" />
-                <span class="modal__regul">
-                  <svg class="modal__bird" width="16" height="15">
+              <label class="label-check">
+                <input class="label-check__hidden" type="checkbox" name="regulamin" />
+                <span class="label-check__regul">
+                  <svg class="label-check__bird" width="16" height="15">
                     <use href="./images/icons.svg/symbol-b.svg#icon-Vector3"></use>
                   </svg>
                   Oświadczam iż akceptuję
-                  <a class="modal__text" href="#">Regulamin</a>
+                  <a class="label-check__text" href="#">Regulamin</a>
                   i
-                  <a class="modal__text" href="#">Politykę Prywatności</a></span
+                  <a class="label-check__text" href="#">Politykę Prywatności</a></span
                 ></label
               >
               <div class="button-submit">
