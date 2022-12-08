@@ -1,94 +1,139 @@
 .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--backdrop-background-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--backdrop-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .close-btn {
-    position: absolute;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    border: 1px solid var(--border-color-close-btn);
-    border-radius: 50%;
-    background-color: var(--color-bacground);
-    right: 8px;
-    top: 8px;
-  }
-  
-  .close-btn:focus {
+.close-btn {
+  position: absolute;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--border-color-close-btn);
+  border-radius: 50%;
+  background-color: var(--color-bacground);
+  right: 8px;
+  top: 8px;
+
+  &:focus {
     border-color: var(--blue);
   }
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%), translateY(-50%);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+  transition-delay: 0;
+}
+
+.is-hidden .modal {
+  transform: scale(0);
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+  transition-timing-function: ease-out;
+  transform: translateX(-50%), translateY(-50%);
+}
+
+.is-hidden .backdrop {
+  transition-delay: 0.2s;
+  visibility: hidden;
+}
+
+.modal {
+  min-width: 320px;
+  min-height: 581px;
+  position: relative;
+  opacity: inherit;
+  visibility: inherit;
+
+  position: absolute;
+  // width: 528px;
+  // min-height: 581px;
+  border-radius: 4px;
+  background-color: var(--color-bacground);
+  box-shadow: var(--box-shadow);
+  padding: 40px;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in cubic-bezier(0.71, 1.51, 0.4, 2);
+  transition-delay: 0s;
+
+
+  @media screen and (min-width: 480px) {
+      width: 450px;
+      min-height: 609px;
+      margin-left: auto;
+      margin-right: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   
-  .is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateX(-50%), translateY(-50%);
-    transition-duration: 0.5s;
-    transition-timing-function: ease-out;
-    transition-delay: 0;
-  }
+    @media screen and (max-width: 479px) {
+      width: 90%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   
-  .is-hidden .modal {
-    transform: scale(0);
-    transition-property: transform;
-    transition-duration: 0.5s;
-    transition-delay: 0s;
-    transition-timing-function: ease-out;
-    transform: translateX(-50%), translateY(-50%);
-  }
+    @media screen and (min-width: 768px) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   
-  .is-hidden .backdrop {
-    transition-delay: 0.2s;
-    visibility: hidden;
-  }
-  
-  .modal {
-    position: absolute;
-    width: 528px;
-    min-height: 581px;
-    border-radius: 4px;
-    background-color: var(--color-bacground);
-    box-shadow: var(--box-shadow);
-    padding: 40px;
-    transform: scale(1);
-    transition-property: transform;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in cubic-bezier(0.71, 1.51, 0.4, 2);
-    transition-delay: 0s;
-  }
-  
-  .modal__header {
+    @media screen and (min-width: 1200px) {
+      width: 528px;
+      min-height: 581px;
+    }
+
+  &__header {
     font-size: 20px;
     font-weight: 700;
-    line-height: 23px;
+    line-height: 1,17;
     letter-spacing: 0.03em;
     text-align: center;
     margin-bottom: 0.75rem;
     color: var(--black);
   }
-  
-  .modal__label {
+
+  &__label {
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.01em;
     position: relative;
-    display: block;
+    display: inline-block;
     color: var(--silver);
-    width: 448px;
+    width: 370px;
     height: 58px;
     margin-bottom: 10px;
+
+    // @media screen and (min-width:1200px) {
+    // width: 448px;
+    // }
+    
+    // @media screen and (max-width:479px) {
+    // width: 80%;
+    // }
+
+    &:has(input:focus) svg {
+      fill: var(--blue);
+    }
   }
-  
-  .modal__icons {
+  &__icons {
     position: absolute;
     left: 15px;
     top: 30px;
@@ -100,9 +145,8 @@
     fill: var(--silver);
     cursor: text;
   }
-  
-  .modal__input {
-    width: 448px;
+  &__input {
+    width: 370px;
     height: 40px;
     margin-top: 4px;
     margin-bottom: 10px;
@@ -112,29 +156,32 @@
     transition-timing-function: var(--cubic);
     padding-left: 40px;
     outline: 0;
+
+    @media screen and (min-width:1200px) {
+    width: 448px;
+    }
+    
+    @media screen and (max-width:479px) {
+    width: 80%;
+    }
+
+    &:focus {
+      border-color: var(--blue);
+      outline: 0;
+    }
   }
-  
-  .modal__input:focus {
-    border-color: var(--blue);
-    outline: 0;
-  }
-  
-  .modal__label:has(input:focus) svg {
-    fill: var(--blue);
-  }
-  
-  .modal__comment {
+  &__comment {
     height: 120px;
     resize: none;
     padding: 12px 16px;
+
+    &::placeholder {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14px;
+      letter-spacing: 0.01em;
+      margin-bottom: 20px;
+      color: var(--modal-placeholder);
+    }
   }
-  
-  .modal__comment::placeholder {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 14px;
-    letter-spacing: 0.01em;
-    margin-bottom: 20px;
-    color: var(--modal-placeholder);
-  }
-  
+}

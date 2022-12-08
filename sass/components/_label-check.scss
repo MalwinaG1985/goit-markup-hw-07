@@ -1,38 +1,44 @@
-
 .label-check {
-    position: relative;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 146%;
-    letter-spacing: 0.03em;
-    color: var(--silver);
-    display: flex;
-    justify-content: center;
-    padding-top: 60px;
-  }
-  
-  .label-check__hidden {
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 146%;
+  letter-spacing: 0.03em;
+  color: var(--silver);
+  display: flex;
+  justify-content: center;
+  // padding-top: 60px;
+
+  // @media screen and (min-width:1200px) {
+  // padding-left: 0px;
+  // }
+
+  &__hidden {
     visibility: hidden;
+
+    &:checked {
+      outline: 0;
+      color: green;
+    }
+    &:checked + span svg {
+      background-color: var(--blue);
+      border: 0;
+    }
   }
-  
-  .label-check__hidden:checked {
-    outline: 0;
-    color: green;
-  }
-  .label-check__hidden:checked + span svg {
-    background-color: var(--blue);
-    border: 0;
-  }
-  
-  .label-check__text {
+
+  &__text {
     color: var(--blue);
   }
-  
-  .label-check__regul {
+  &__regul {
     margin-top: 20px;
+
+  // @media screen and (min-width: 1200px) {
+  // // font-size: 14px;
+  // // line-height: 1.71;
+  // }
+
   }
-  
-  .label-check__bird {
+  &__bird {
     position: relative;
     color: var(--white);
     background-color: var(--white);
@@ -41,16 +47,14 @@
     transition: border 0.05s, color 0.05s, bacground-color 0.05s;
     transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
   }
-  
-  
-  
-  .button-submit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .button-submit__modal-button-s {
+}
+
+.button-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__modal-button-s {
     background-color: var(--blue);
     color: var(--white);
     border-radius: 4px;
@@ -66,4 +70,4 @@
     width: 200px;
     height: 50px;
   }
-  
+}

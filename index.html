@@ -40,7 +40,7 @@
             </ul>
           </nav>
           <div>
-            <ul class="nav2">
+            <ul class="nav2 nav2__right">
               <li class="nav2__list-link-color">
                 <a class="nav2__link-mt" href="mailto:info@devstudio.com">
                   <svg class="nav2__icon-mt" width="16px" height="12px">
@@ -60,13 +60,29 @@
             </ul>
           </div>
         </div>
+
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
       </div>
     </header>
 
     <main>
       <div style="color: white">
-        <div class="wrapper">
-          <div class="container">
+        <div class="container">
+          <div class="wrapper">
             <ul class="wrapper__main-tittle">
               <li><h1 class="wrapper__h1">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNEZU</h1></li>
               <li>
@@ -85,55 +101,60 @@
             <ul class="container-lorem__set">
               <li class="container-lorem__item">
                 <div class="container-lorem__lorem-icon">
-                  <svg width="70" height="70">
+                  <svg class="container-lorem__icon-position"   width="70" height="70">
                     <use xlink:href="./images/icons.svg/icony-defs.svg#icon-antenna-1"></use>
                   </svg>
                 </div>
+                <div class="container-lorem__title">
                 <h4 class="container-lorem__h4">LOREM IPSUM</h4>
                 <p class="container-lorem__txt">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non
                   sodales dui. Interdum et malesuada
                 </p>
+              </div>
               </li>
 
               <li class="container-lorem__item">
                 <div class="container-lorem__lorem-icon">
-                  <svg width="70" height="70">
+                  <svg class="container-lorem__icon-position" width="70" height="70">
                     <use xlink:href="./images/icons.svg/icony-defs.svg#icon-clock-1"></use>
                   </svg>
                 </div>
-                <h4 class="container-lorem____h4">LOREM IPSUM</h4>
-
+                <div class="container-lorem__title">
+                <h4 class="container-lorem__h4">LOREM IPSUM</h4>
                 <p class="container-lorem__txt">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non
                   sodales dui. Interdum et malesuada
                 </p>
+              </div>
               </li>
               <li class="container-lorem__item">
                 <div class="container-lorem__lorem-icon">
-                  <svg width="70" height="70">
+                  <svg class="container-lorem__icon-position"  width="70" height="70">
                     <use xlink:href="./images/icons.svg/icony-defs.svg#icon-diagram-1"></use>
                   </svg>
                 </div>
+                <div class="container-lorem__title">
                 <h4 class="container-lorem__h4">LOREM IPSUM</h4>
-
                 <p class="container-lorem__txt">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non
                   sodales dui. Interdum et malesuada
                 </p>
+              </div>
               </li>
               <li class="container-lorem__item">
                 <div class="container-lorem__lorem-icon">
-                  <svg width="70" height="70">
+                  <svg class="container-lorem__icon-position"  width="70" height="70">
                     <use xlink:href="./images/icons.svg/icony-defs.svg#icon-astronaut-1"></use>
                   </svg>
                 </div>
+                <div class="container-lorem__title">
                 <h4 class="container-lorem__h4">LOREM IPSUM</h4>
-
                 <p class="container-lorem__txt">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non
                   sodales dui. Interdum et malesuada
                 </p>
+              </div>
               </li>
             </ul>
           </div>
@@ -142,11 +163,19 @@
 
       <section>
         <div class="container">
+          <div class="hide">
           <h2 class="sub-title">Czym się zajmujemy</h2>
           <ul class="wrapper2">
             <li class="wrapper2__images-description">
+              <picture>
+                <source
+                  src="./images/foto/img1.webp 1x, ./images/foto/img1-2x.webp 2x"
+                  type="image/webp"
+                />
+              </picture>
               <img
-                src="./images/pisanie_na_klawiaturze.jpg"
+                srcset="./images/foto/img1.jpg 1x, ./images/foto/img1-2x.jpg 2x"
+                src="./images/foto/pisanie_na_klawiaturze.jpg"
                 alt="note in laptop"
                 width="370"
                 height="294"
@@ -154,8 +183,15 @@
               <p class="wrapper2__text-images-one"></p>
             </li>
             <li class="wrapper2__images-description">
+              <picture>
+                <source
+                  src="./images/foto/img2.webp 1x,./images/foto/img2-2x.webp 2x"
+                  type="image/webp"
+                />
+              </picture>
               <img
-                src="./images/porównywanie_komórek.jpg"
+                srcset="./images/foto/img2.jpg 1x, ./images/foto/img2-2x.jpg 2x"
+                src="./images/foto/porównywanie_komórek.jpg"
                 alt="work with phone"
                 width="370"
                 height="294"
@@ -163,8 +199,15 @@
               <p class="wrapper2__text-images-two"></p>
             </li>
             <li class="wrapper2__images-description">
+              <picture>
+                <source
+                  srcset="./images/foto/img3.webp 1x, ./images/foto/img3-2x.webp 2x"
+                  type="image/webp"
+                />
+              </picture>
               <img
-                src="./images/praca_z_tabletem.jpg"
+                srcset="./images/foto/img3.jpg 1x, ./images/foto/img3-2x.jpg 2x"
+                src="./images/foto/praca_z_tabletem.jpg"
                 alt="work with tablet"
                 width="370"
                 height="294"
@@ -173,23 +216,49 @@
             </li>
           </ul>
         </div>
+        </div>
       </section>
 
-      <section>
-        <div class="team">
+      <section class="team">
+        <div >
           <div class="container">
-            <div class="team__section section section2">
+            <div class="team__section">
               <h2 class="team__h2">Nasz Zespół</h2>
               <ul class="team__position">
-                <li class="team__list">
-                  <div>
-                    <a>
+                <li class="team__list ">
+                  <div class="team__block ">
+                    <picture class="team__position2">
+                      <source
+                        src="./images/product-des/product-des-mobile.webp 1x,./images/product-des/product-des-mobile2x.webp 2x"
+                        media="(min-width: 480px)"
+                        type="image/webp" />
+                      <source
+                        src="./images/product-des/product-des-mobile.jpg 1x,./images/product-des/product-des-mobile2x.jpg 2x"
+                        media="(min-width: 480px)"
+                        type="image/jpg" />
+                      <source
+                        src="./images/product-des/product-des-tablet.webp 1x,./images/product-des/product-des-tablet2x.webp 2x"
+                        media="(min-width: 768px) and (max-width: 1199px)"
+                        type="image/webp" />
+                      <source
+                        src="./images/product-des/product-des-tablet.jpg 1x,./images/product-des/product-des-tablet2x.jpg 2x"
+                        media="(min-width: 768px) and (max-width: 1199px)"
+                        type="image/jpg" />
+                      <source
+                        src="./images/product-des/product-des-laptop.webp 1x"
+                        media="(min-width: 1200px)"
+                        type="image/webp" />
+                      <source
+                        src="./images/product-des/product-des-laptop.jpg 1x"
+                        media="(min-width: 1200px)"
+                        type="image/jpg" />
+                        
                       <img
-                        src="./images/młody_mężczyzna_w_brązowej_koszuli.jpg"
+                        src="./images/product-des/product-des.jpg"
                         alt="mężczyzna z laptopem"
                         width="270"
-                        height="260"
-                    /></a>
+                        
+                    /></picture>
                     <p class="team__txt1"><strong>John Doe</strong></p>
                     <p class="team__txt2">Product Designer</p>
                     <ul class="all-social-icon">
@@ -234,14 +303,47 @@
                 </li>
 
                 <li class="team__list">
-                  <div>
-                    <a>
+                  <div class="team__block" >
+                    <picture>
+                      <source
+                        src="./images/fr-developer/fr-dev-mobile.webp 1x,./images/fr-developer/fr-dev-mobile2x.webp 2x"
+                        media="(min-width:480px)"
+                        type="image/webp"
+                      />
+
+                      <source
+                        src="./images/fr-developer/fr-dev-mobile.jpg 1x,./images/fr-developer/fr-dev-mobile2x.jpg 2x"
+                        media="(min-width: 480px)"
+                        type="image/jpg"
+                      />
+
+                      <source
+                        src="./images/fr-developer/fr-dev-tablet.webp 1x,./images/fr-developer/fr-dev-tablet2x.webp 2x"
+                        media="(min-width: 768px) and (max-width: 1199px)"
+                        type="image/webp"
+                      />
+                      <source
+                        src="./images/fr-developer/fr-dev-tablet.jpg 1x,./images/fr-developer/fr-dev-tablet2x.jpg 2x"
+                        media="(min-width: 768px) and (max-width: 1199px)"
+                        type="image/jpg"
+                      />
+                      <source
+                        src="./images/fr-developer/fr-dev-laptop.webp 1x"
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        src="./images/fr-developer/fr-dev-laptop.jpg 1x"
+                        media="(min-width: 1200px)"
+                        type="image/jpg"
+                      />
                       <img
-                        src="./images/uśmiechnięta_blondynka.jpg"
+                        src="./images/fr-developer/fr-dev-tablet.jpg"
                         alt="uśmiechnięta kobieta"
                         width="270"
                         height="260"
-                    /></a>
+                      />
+                    </picture>
                     <p class="team__txt1"><strong>John Doe</strong></p>
                     <p class="team__txt2">Frontend Designer</p>
                     <ul class="all-social-icon">
@@ -286,14 +388,39 @@
                 </li>
 
                 <li class="team__list">
-                  <div>
-                    <a>
+                  <div  class="team__block">
+                    <picture>
+                      <source
+                        src="./images/marketing/marketing-mobile.webp 1x,./images/marketing/marketing-mobile2x.webp 2x"
+                        media="(min-width: 480px)"
+                        type="image/webp" />
+                      <source
+                        src="./images/marketing/marketing-mobile.jpg 1x,./images/marketing/marketing-mobile2x.jpg 2x"
+                        media="(min-width: 480px)"
+                        type="image/jpg" />
+                      <source
+                        src="./images/marketing/marketing-tablet.webp 1x,./images/marketing/marketing-tablet2x.webp 2x"
+                        media="(min-width: 768px) and (max-width: 1199px)"
+                        type="image/webp" />
+                      <source
+                        src="./images/marketing/marketing-tablet.jpg 1x,./images/marketing/marketing-tablet2x.jpg 2x"
+                        media="(min-width: 768px) and (max-width: 1199px)"
+                        type="image/jpg" />
+                      <source
+                        src="./images/marketing/marketing-laptop.webp 1x"
+                        media="(min-width: 1200px)"
+                        type="image/webp" />
+                      <source
+                        src="./images/marketing/marketing-laptop.jpg 1x"
+                        media="(min-width: 1200px)"
+                        type="image/jpg" />
+
                       <img
-                        src="./images/szczupły_mężczyzna.jpg"
+                        src="./images/marketing/marketing.jpg"
                         alt="mężczyzna patrzący w bok"
                         width="270"
-                        height="260"
-                    /></a>
+                        
+                    /></picture>
                     <p class="team__txt1"><strong>John Doe</strong></p>
                     <p class="team__txt2">Marketing</p>
                     <ul class="all-social-icon">
@@ -338,14 +465,39 @@
                 </li>
 
                 <li class="team__list">
-                  <div>
+                  <div class="team__block">
                     <a>
-                      <img
-                        src="./images/mężczyzna_z_tatuażami.jpg"
-                        alt="mężczyzna w okularach"
-                        width="270"
-                        height="260"
-                    /></a>
+                      <picture>
+                        <source
+                          src="./images/designer/designer-mobile.webp 1x,./images/designer/designer-mobile2x.webp 2x"
+                          media="(min-width: 480px)"
+                          type="image/webp" />
+                        <source
+                          src="./images/designer/designer-mobile.jpg 1x,./images/designer/designer-mobile2x.jpg 2x"
+                          media="(min-width: 480px)"
+                          type="image/jpg" />
+                        <source
+                          src="./images/designer/designer-tablet.webp 1x,./images/designer/designer-tablet2x.webp 2x"
+                          media="(min-width: 768px) and (max-width: 1199px)"
+                          type="image/webp" />
+                        <source
+                          src="./images/designer/designer-tablet.jpg 1x,./images/designer/designer-tablet2x.jpg 2x"
+                          media="(min-width: 768px) and (max-width: 1199px)"
+                          type="image/jpg" />
+                        <source
+                          src="./images/designer/designer-laptop.webp 1x"
+                          media="(min-width: 1200px)"
+                          type="image/webp" />
+                        <source
+                          src="./images/designer/designer-laptop.jpg 1x"
+                          media="(min-width: 1200px)"
+                          type="image/jpg" />
+                        <img
+                          src="./images/designer/designer.jpg"
+                          alt="mężczyzna w okularach"
+                          width="270"
+                          height="260"
+                      /></picture>
                     <p class="team__txt1"><strong>John Doe</strong></p>
                     <p class="team__txt2">Ul Designer</p>
                     <ul class="all-social-icon">
@@ -459,7 +611,7 @@
               </li>
               <li>
                 <div style="font-style: normal" class="address__text address__size">
-                  <p class="address__text--color">m. Warszawa, Aleje Jerozolimskie 21</p>
+                  <p class="adress__text">m. Warszawa, Aleje Jerozolimskie 21</p>
                 </div>
               </li>
               <li>
@@ -470,7 +622,7 @@
                 </div>
               </li>
               <li>
-                <div class="adress__text adress__text--style address__size">
+                <div class="address__text--color adress__text--style address__size">
                   <p>+48 111 111 111</p>
                 </div>
               </li>
@@ -577,6 +729,49 @@
         </div>
       </div>
     </div>
-    <script src="./modal.js"></script>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li><a href="" class="link">Agencja</a></li>
+        <li><a href="" class="link">Portfolio</a></li>
+        <li><a href="" class="link">Kontakt</a></li>
+      </ul>
+
+      <ul class="nav-mobile-container">
+        <li><a href="" class="mobile-tel">+48 111 111 111</a></li>
+        <li><a href="" class="mobile-mail">info@devstudio.com</a></li>
+      </ul>
+
+      <ul class="social-mobile-container">
+        <li><a href="" class="mobile-social"></a>Instagram</li>
+        <li><a href="" class="mobile-social"></a>Twitter</li>
+        <li><a href="" class="mobile-social"></a>Facebook</li>
+        <li><a href="" class="mobile-social"></a>Linkedin</li>
+      </ul>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
