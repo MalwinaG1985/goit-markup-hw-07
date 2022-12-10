@@ -99,7 +99,7 @@
   }
 
   &__position2{
-    padding-bottom: 30px;
+    // padding-bottom: 30px;
     width: 100%;
     display: blok;
     z-index: 1;
@@ -130,14 +130,15 @@
       background-color: var(--blue);
       cursor: pointer;
     }
-    &__color-social {
-      --color2: currentColor;
-      transition: color 250ms var(--cubic);
-
-      &:hover,
-      &:focus {
-        color: var(--white);
-      }
     }
   }
-}
+
+ .all-social-icon__color-social {
+   --color2: currentColor;
+   transition: color 250ms var(--cubic);
+
+   &:hover,
+   &:focus {
+     color: var(--white);
+   }
+  }
